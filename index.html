@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dynamic Resume Builder</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 20px;
+      }
+
+      .container {
+        display: flex;
+        justify-content: space-between;
+        gap: 20px;
+        max-width: 1200px;
+        margin: 0 auto;
+      }
+
+      form {
+        width: 40%;
+        padding: 20px;
+        background-color: #f4f4f4;
+        border-radius: 8px;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+      }
+
+      label {
+        display: block;
+        margin-bottom: 8px;
+        font-weight: bold;
+      }
+
+      input,
+      textarea {
+        width: 100%;
+        padding: 8px;
+        margin-bottom: 15px;
+        border: 1px solid #ddd;
+        border-radius: 4px;
+      }
+
+      button {
+        padding: 10px 20px;
+        background-color: #4caf50;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+      }
+
+      .resume {
+        width: 50%;
+        padding: 20px;
+        background-color: #ffffff;
+        border-radius: 8px;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+      }
+
+      h2 {
+        background-color: #4caf50;
+        color: white;
+        padding: 10px;
+        margin-bottom: 20px;
+      }
+
+      .dynamic-content {
+        font-size: 18px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <!-- Form Section -->
+      <form id="resume-form">
+        <h2>Fill out your Resume Details</h2>
+
+        <label for="name">Name</label>
+        <input type="text" id="name" required />
+
+        <label for="email">Email</label>
+        <input type="email" id="email" required />
+
+        <label for="education">Education</label>
+        <input type="text" id="education" required />
+
+        <label for="work-experience">Work Experience</label>
+        <textarea id="work-experience" required></textarea>
+
+        <label for="skills">Skills (comma-separated)</label>
+        <input type="text" id="skills" required />
+
+        <button type="submit">Generate Resume</button>
+      </form>
+
+      <!-- Dynamic Resume Section -->
+      <div class="resume">
+        <h2>Your Dynamic Resume</h2>
+        <div id="resume-output" class="dynamic-content">
+          <!-- Resume details will be inserted here -->
+        </div>
+      </div>
+    </div>
+
+    <script src="app.js"></script>
+  </body>
+</html>
